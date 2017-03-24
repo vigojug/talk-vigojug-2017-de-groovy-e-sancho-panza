@@ -1,0 +1,76 @@
+= De Groovy ... e Sancho Panza
+Antón R. Yuste - @antonmry - OptareSolutions & VigoJUG
+2017-03-29
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:deckjs_transition: fade
+:navigation:
+:menu:
+:status:
+:adoctor: http://asciidoctor.org/[Asciidoctor]
+:gradle: http://gradle.org[Gradle]
+
+== Who am I
+
+image::costadamorte.jpg[background, size=cover]
+
+++++
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/mini-me.png"></div>
+</div>
+++++
+
+
+[source,groovy]
+----
+speaker = [
+    name: 'Antón R. Yuste',
+    company: 'Optare Solutions',
+    oss: 'GaliBots committer and founder',
+    twitter: '@antonmry',
+    github: 'antonmry',
+    extraDescription: ['VigoJUG co-organiser' ,
+         '''Misc OSS contribs (Gradle plugins,
+            docker images, SIP & WebRTC...)''',
+         'surfer wannabe',]
+].each{ k, v -> println "${k}:${v}" }
+----
+
+== Agenda
+
+* ¿Sancho Panza?
+* Scripting
+* Gradle & sshoogr
+* Spock & Geb
+* DSLs (Jenkins, JMeter, SoapUI)
+* Your own DSLs
+
+== ¿Sancho Panza?
+
+== ¡Gracias!
+
+* Slides e código: https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza
+* Documentación Groovy : http://gradle.org/documentation/
+* Podes encontrarme en twitter: http://twitter.com/antonmry[@antonmry]
+
+Para saber máis sobre o VigoJUG visita http://www.vigojug.org[www.vigojug.org]
+
+// Add questions here?
+
+[%notitle]
+== VigoJUG
+
+// add sponsors
+
+== Próximas actividades
+
+== Kahoot?
+
