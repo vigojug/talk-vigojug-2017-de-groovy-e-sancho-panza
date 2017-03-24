@@ -10,8 +10,8 @@ buildscript {
         classpath 'org.ysb33r.gradle:vfs-gradle-plugin:1.0-beta3'
         classpath 'commons-httpclient:commons-httpclient:3.1'
         classpath 'org.ajoberstar:gradle-git:1.1.0'
+        classpath 'org.kordamp.gradle:livereload-gradle-plugin:0.2.1'
     }
-
 }
 
 repositories {
@@ -25,6 +25,7 @@ apply plugin: 'idea'
 apply plugin: 'org.asciidoctor.convert'
 apply from: 'gradle/github.gradle'
 apply from: 'gradle/pdf.gradle'
+apply plugin: 'org.kordamp.gradle.livereload'
 
 dependencies {
     gems 'rubygems:slim:2.1.0'
@@ -40,7 +41,7 @@ ext {
 }
 
 asciidoctorj {
-   version = '1.5.4'
+    version = '1.5.4'
 }
 
 task download {
@@ -67,6 +68,10 @@ task copyTheme(type: Copy) {
 task copyScreencasts(type: Copy) {
     from fileTree('src/docs/asciidoc/screencast')
     into file("$buildDir/asciidoc/revealjs")
+}
+
+liveReload {
+    docRoot = "$buildDir/asciidoc/revealjs"
 }
 
 download {

@@ -37,25 +37,41 @@ speaker = [
     oss: 'GaliBots committer and founder',
     twitter: '@antonmry',
     github: 'antonmry',
-    extraDescription: ['VigoJUG co-organiser' ,
+    extraDescription: ['VigoJUG co-organiser',
          '''Misc OSS contribs (Gradle plugins,
             docker images, SIP & WebRTC...)''',
          'surfer wannabe',]
 ].each{ k, v -> println "${k}:${v}" }
 ----
 
-== Agenda
+== Axenda
 
 * ¿Sancho Panza?
 * Scripting
-* Gradle & sshoogr
-* Spock & Geb
+* Xestión de dependencias e de configuración
+* Probas unitarias e de configuración
 * DSLs (Jenkins, JMeter, SoapUI)
-* Your own DSLs
+* As tuas propias DSLs
 
 == ¿Sancho Panza?
+image::sancho.jpg[sancho,640,480]
+
+== Groovy no mapa da JVM
+image::groovy-island.jpg[sancho,640,480]
+
+Source: https://jaxenter.com/pirates-of-the-jvm-the-infographic-132524.html[@jaxenter.com]
+
+== Definición
+
+* Orientado a obxectos
+* Sintaxe moi similar a Java
+* Sinxelo e moi expresivo
+* Tipado... ou non
+* Dinámico... ou estático
 
 == ¡Gracias!
+
+image::questions.jpg[background, size=cover]
 
 * Slides e código: https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza
 * Documentación Groovy : http://gradle.org/documentation/
@@ -65,8 +81,8 @@ Para saber máis sobre o VigoJUG visita http://www.vigojug.org[www.vigojug.org]
 
 // Add questions here?
 
-[%notitle]
 == VigoJUG
+
 
 // add sponsors
 
