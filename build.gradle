@@ -88,12 +88,3 @@ download {
 
 apply from: 'gradle/asciidoctor.gradle'
 
-task browser(type:Exec) {
-    commandLine 'cmd', '/c', 'stop.bat'
-
-    //on linux
-    commandLine '/opt/google/chrome/google-chrome', '--incognito', '--allow-file-access-from-files', "$buildDir/asciidoc/revealjs/index.html"
-
-    //store the output instead of printing to the console:
-    standardOutput = new ByteArrayOutputStream()
-}
