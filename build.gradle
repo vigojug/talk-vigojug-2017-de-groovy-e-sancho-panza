@@ -74,6 +74,10 @@ liveReload {
     docRoot = "$buildDir/asciidoc/revealjs"
 }
 
+githubPages {
+    repoUri = 'git@github.com:antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza.git'
+}
+
 download {
     description "Download extra deckjs/reveal.js resources"
     inputs.property 'asciidoctorBackendVersion', asciidoctorBackendVersion

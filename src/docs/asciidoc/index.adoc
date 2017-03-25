@@ -12,7 +12,7 @@ ifndef::sourcedir[:sourcedir: ../java]
 :adoctor: http://asciidoctor.org/[Asciidoctor]
 :gradle: http://gradle.org[Gradle]
 
-== Who am I
+== E ti, de quen ves sendo?
 
 image::costadamorte.jpg[background, size=cover]
 
@@ -55,38 +55,137 @@ speaker = [
 
 == ¿Sancho Panza?
 image::sancho.jpg[sancho,640,480]
+// How we use Groovy!
+
+== Groovy, VigoJUG, VigoJUG, Groovy
+
+* Sintaxe moi similar a Java
+* Sinxelo e moi expresivo
+* Orientado a obxectos... e funcional
+* Tipado... se queres
+* Dinámico... ou estático
+* Usado por Netflix, Oracle, Google, etc.
 
 == Groovy no mapa da JVM
 image::groovy-island.jpg[sancho,640,480]
+// Relation with other languages
+// Why Groovy is not so popular
+// Naming is important
 
 Source: https://jaxenter.com/pirates-of-the-jvm-the-infographic-132524.html[@jaxenter.com]
 
-== Definición
+== Exemplo
 
-* Orientado a obxectos
-* Sintaxe moi similar a Java
-* Sinxelo e moi expresivo
-* Tipado... ou non
-* Dinámico... ou estático
+Calcular a potencia de dous dun array
+
+[source,groovy]
+----
+[0, 1, 2, 3, 4, ..., n]
+----
+
+image::formula.jpg[sancho,256,192]
+
+[source,groovy]
+----
+[0, 1, 2, 4, 8, ..., 2^n]
+----
+
+=== Java 7
+
+[source,java]
+----
+import java.util.ArrayList;
+import java.util.List;
+
+class PowersOfTwoJava7 {
+
+    public static void main(String[] args) {
+        List list = new ArrayList();
+
+        for (int i = 0; i < 10; i++) {
+           list.add(i);
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println((int) Math.pow(2, i));
+        }
+    }
+
+}
+----
+
+
+=== Java 8
+
+[source,java]
+----
+import java.util.stream.IntStream;
+
+class PowersOfTwoJava8 {
+
+    public static void main(String[] args) {
+
+        IntStream.range(1, 10)
+                .map(i -> (int) Math.pow(2, i))
+                .forEach(System.out::println);
+
+    }
+
+}
+
+----
+
+=== Groovy
+
+[source,groovy]
+----
+(0..<10).forEach() { println 2 ** it }
+----
+
+== Scripting
+
+[source,groovy]
+----
+@Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7.1')
+
+import groovyx.net.http.RESTClient
+
+def jokes = new RESTClient('http://tambal.azurewebsites.net')
+def resp = jokes.get( path: '/joke/random/' )
+
+assert resp.status == 200
+
+println "Joke: " + resp.data.joke
+----
 
 == ¡Gracias!
 
 image::questions.jpg[background, size=cover]
 
-* Slides e código: https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza
-* Documentación Groovy : http://gradle.org/documentation/
-* Podes encontrarme en twitter: http://twitter.com/antonmry[@antonmry]
+* Slides: https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/
+* Código: https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza
+* Documentación Groovy : http://www.groovy-lang.org/
+* Podes preguntarme en twitter: http://twitter.com/antonmry[@antonmry]
 
 Para saber máis sobre o VigoJUG visita http://www.vigojug.org[www.vigojug.org]
 
-// Add questions here?
 
 == VigoJUG
 
+* Un meetup o derradeiro martes de cada mes.
+* ¿Te animas con unha charla?. Licencias de JetBrains ;-)
+* Canal de slack #VigoJUG en http://phpvigo.slack.com
+* Involucrar as empresas locais.
+* ¿Outras actividades?.
 
-// add sponsors
+// TODO: add sponsors
 
-== Próximas actividades
+== Kahoot
 
-== Kahoot?
+image::kahoot.jpg[kahoot, 640, 480]
 
+// TODO
+// Question about basic vs. advanced talks
+// Question about reading club
+// Question about study group (Java 9, introduction, etc.)
+// Question about workshop with kids (minecraft)
