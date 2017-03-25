@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Antón R. Yuste - @antonmry - OptareSolutions &amp; VigoJUG" /><title>De Groovy &#8230;&#8203; e Sancho Panza</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js/css/theme/summit.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><link rel="stylesheet" type="text/css" href="reveal.js/css/theme/asciinema-player.css" />
+<link rel="stylesheet" type="text/css" href="reveal.js/css/theme/github-gist.css" />
+<script src="reveal.js/css/theme/asciinema-player.js"></script>
+<script>document.write('<script src="http://'
+    + (location.host || 'localhost').split(':')[0]
+    + ':35729/livereload.js"></'
+    + 'script>')</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>De Groovy &#8230;&#8203; e Sancho Panza</h1><p class="author"><small>Antón R. Yuste - @antonmry - OptareSolutions &amp; VigoJUG</small></p></section><section id="who-am-i" data-background-image="./images/costadamorte.jpg" data-background-size="cover"><h2>Who am I</h2>
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/mini-me.png"></div>
+</div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">speaker = [
+    name: 'Antón R. Yuste',
+    company: 'Optare Solutions',
+    oss: 'GaliBots committer and founder',
+    twitter: '@antonmry',
+    github: 'antonmry',
+    extraDescription: ['VigoJUG co-organiser',
+         '''Misc OSS contribs (Gradle plugins,
+            docker images, SIP &amp; WebRTC...)''',
+         'surfer wannabe',]
+].each{ k, v -&gt; println "${k}:${v}" }</code></pre></div></div></section>
+<section id="axenda"><h2>Axenda</h2><div class="ulist"><ul><li><p>¿Sancho Panza?</p></li><li><p>Scripting</p></li><li><p>Xestión de dependencias e de configuración</p></li><li><p>Probas unitarias e de configuración</p></li><li><p>DSLs (Jenkins, JMeter, SoapUI)</p></li><li><p>As tuas propias DSLs</p></li></ul></div></section>
+<section id="sancho-panza"><h2>¿Sancho Panza?</h2><div class="imageblock" style=""><img src="./images/sancho.jpg" alt="sancho" width="640" height="480" /></div></section>
+<section id="groovy-no-mapa-da-jvm"><h2>Groovy no mapa da JVM</h2><div class="imageblock" style=""><img src="./images/groovy-island.jpg" alt="sancho" width="640" height="480" /></div>
+<div class="paragraph"><p>Source: <a href="https://jaxenter.com/pirates-of-the-jvm-the-infographic-132524.html">@jaxenter.com</a></p></div></section>
+<section id="definicin"><h2>Definición</h2><div class="ulist"><ul><li><p>Orientado a obxectos</p></li><li><p>Sintaxe moi similar a Java</p></li><li><p>Sinxelo e moi expresivo</p></li><li><p>Tipado&#8230;&#8203; ou non</p></li><li><p>Dinámico&#8230;&#8203; ou estático</p></li></ul></div></section>
+<section id="gracias" data-background-image="./images/questions.jpg" data-background-size="cover"><h2>¡Gracias!</h2>
+<div class="ulist"><ul><li><p>Slides e código: <a href="https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza" class="bare">https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza</a></p></li><li><p>Documentación Groovy : <a href="http://gradle.org/documentation/" class="bare">http://gradle.org/documentation/</a></p></li><li><p>Podes encontrarme en twitter: <a href="http://twitter.com/antonmry">@antonmry</a></p></li></ul></div>
+<div class="paragraph"><p>Para saber máis sobre o VigoJUG visita <a href="http://www.vigojug.org">www.vigojug.org</a></p></div></section>
+<section id="vigojug"><h2>VigoJUG</h2></section>
+<section id="prximas-actividades"><h2>Próximas actividades</h2></section>
+<section id="kahoot"><h2>Kahoot?</h2></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'summit',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script><div id="footer">
+  <div style="width:100%">
+     <div style="display:inline; vertical-align: middle; line-height: 40px;">2017 - VigoJUG - @antonmry - De Groovy e Sancho Panza</div>
+     <div style="display:inline; position:absolute; right: 50px;"><img src="images/vigojug-logo-min.png"></div>
+  </div>
+</div></body></html>
