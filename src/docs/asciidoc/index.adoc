@@ -47,9 +47,10 @@ speaker = [
 == Axenda
 
 * ¿Sancho Panza?
-* Scripting
+* Instalación
+* Scripting e prototipado
 * Xestión de dependencias e de configuración
-* Probas unitarias e de configuración
+* Probas unitarias e de integración
 * DSLs (Jenkins, JMeter, SoapUI)
 * As tuas propias DSLs
 
@@ -76,7 +77,7 @@ Source: https://jaxenter.com/pirates-of-the-jvm-the-infographic-132524.html[@jax
 
 == Exemplo
 
-Calcular a potencia de dous dun array
+Calcular a potencia de dous nun array
 
 [source,groovy]
 ----
@@ -130,9 +131,7 @@ class PowersOfTwoJava8 {
                 .forEach(System.out::println);
 
     }
-
 }
-
 ----
 
 === Groovy
@@ -142,7 +141,22 @@ class PowersOfTwoJava8 {
 (0..<10).forEach() { println 2 ** it }
 ----
 
-== Scripting
+== Instalación
+
+screencast:sdkman[]
+
+=== Moi doado
+
+```
+curl -s "https://get.sdkman.io" | bash
+sdk install groovy
+sdk install gradle
+sdk install sshoogr
+```
+
+Info: https://get.sdkman.io[sdkman.io]
+
+== Scripting e prototipado
 
 [source,groovy]
 ----
@@ -158,17 +172,145 @@ assert resp.status == 200
 println "Joke: " + resp.data.joke
 ----
 
+=== Demo scripting
+
+screencast:assert[]
+
+== Xestión de dependencias con Gradle
+
+[source,groovy]
+----
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'log4j', name: 'log4j', version: '1.0'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+----
+
+Info: https://gradle.org/docs#getting-started[www.gradle.org]
+
+
+== Xestión da configuración con sshoogr
+
+[source,groovy]
+----
+remoteSession('user2:654321@localhost:2222') {
+  exec 'rm -rf /tmp/*'
+  exec 'touch /var/lock/my.pid'
+  remoteFile('/var/my.conf').text = "enabled=true"
+}
+----
+
+Info: https://github.com/aestasit/sshoogr[github.com/aestasit/sshoogr]
+
+== Probas unitarias con Spock
+
+[source,groovy]
+----
+def "HashMap accepts null key"() {
+  setup:
+  def map = new HashMap()
+
+  when:
+  map.put(null, "elem")
+
+  then:
+  notThrown(NullPointerException)
+}
+----
+
+Info: http://spockframework.org[spockframework.org]
+
+== Probas E2E con Geb
+
+[source,groovy]
+----
+import geb.Browser
+
+Browser.drive {
+    go "http://myapp.com/login"
+
+    assert $("h1").text() == "Please Login"
+
+    $("form.login").with {
+        username = "admin"
+        password = "password"
+        login().click()
+    }
+
+    assert $("h1").text() == "Admin Section"
+}
+----
+
+Info: http://www.gebish.org[www.gebish.org]
+
+== DSLs (Jenkins, JMeter, SoapUI)
+
+[source,groovy]
+----
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'make'
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml'
+            }
+        }
+    }
+}
+----
+
+== Custom DSLs
+
+[source,groovy]
+----
+// equivalent to: turn(left).then(right)
+turn left then right
+
+// equivalent to: take(2.pills).of(chloroquinine).after(6.hours)
+take 2.pills of chloroquinine after 6.hours
+
+// equivalent to: paint(wall).with(red, green).and(yellow)
+paint wall with red, green and yellow
+
+// with named parameters too
+// equivalent to: check(that: margarita).tastes(good)
+check that: margarita tastes good
+
+// with closures as parameters
+// equivalent to: given({}).when({}).then({})
+given { } when { } then { }
+----
+
+Info: http://docs.groovy-lang.org/docs/latest/html/documentation/core-domain-specific-languages.html[groovy-lang.org]
+
+[%notitle]
+== Resumen
+
+image::austin-powers.jpg[background, size=cover]
+
 == ¡Gracias!
 
 image::questions.jpg[background, size=cover]
 
 * Slides: https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/
 * Código: https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza
-* Documentación Groovy : http://www.groovy-lang.org/
+* Documentación Groovy: http://www.groovy-lang.org
 * Podes preguntarme en twitter: http://twitter.com/antonmry[@antonmry]
-
-Para saber máis sobre o VigoJUG visita http://www.vigojug.org[www.vigojug.org]
-
 
 == VigoJUG
 

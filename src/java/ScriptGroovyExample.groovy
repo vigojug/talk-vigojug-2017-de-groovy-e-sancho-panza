@@ -5,7 +5,7 @@ import groovyx.net.http.RESTClient
 def jokes = new RESTClient('http://tambal.azurewebsites.net')
 def resp = jokes.get( path: '/joke/random/' )
 
-assert resp.status == 200
+assert resp.status == 500
 
 println "Joke: " + resp.data.joke
 
