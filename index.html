@@ -1,7 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Antón R. Yuste - @antonmry - OptareSolutions &amp; VigoJUG" /><title>De Groovy &#8230;&#8203; e Sancho Panza</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js/css/theme/summit.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><link rel="stylesheet" type="text/css" href="reveal.js/css/theme/asciinema-player.css" />
 <link rel="stylesheet" type="text/css" href="reveal.js/css/theme/github-gist.css" />
 <script src="reveal.js/css/theme/asciinema-player.js"></script>
-<script>document.write('<script src="http://'
+<script>if (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+    document.write('<script src="http://'
     + (location.host || 'localhost').split(':')[0]
     + ':35729/livereload.js"></'
     + 'script>')</script></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>De Groovy &#8230;&#8203; e Sancho Panza</h1><p class="author"><small>Antón R. Yuste - @antonmry - OptareSolutions &amp; VigoJUG</small></p></section><section id="e-ti-de-quen-ves-sendo" data-background-image="./images/costadamorte.jpg" data-background-size="cover"><h2>E ti, de quen ves sendo?</h2>
@@ -60,9 +61,9 @@ class PowersOfTwoJava8 {
     }
 }</code></pre></div></div></section><section id="groovy"><h2>Groovy</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">(0..&lt;10).forEach() { println 2 ** it }</code></pre></div></div></section></section>
 <section><section id="instalacin"><h2>Instalación</h2><div class="paragraph"><p>
-<div id="player-container-e6bbf0e9-ca78-482d-9731-6c39f869e5f1"></div>
+<div id="player-container-d2460e7c-da51-4154-a5d4-8488841869f5"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-e6bbf0e9-ca78-482d-9731-6c39f869e5f1', 'sdkman.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-d2460e7c-da51-4154-a5d4-8488841869f5', 'sdkman.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section><section id="moi-doado"><h2>Moi doado</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>curl -s "https://get.sdkman.io" | bash
 sdk install groovy
@@ -79,9 +80,9 @@ def resp = jokes.get( path: '/joke/random/' )
 assert resp.status == 200
 
 println "Joke: " + resp.data.joke</code></pre></div></div></section><section id="demo-scripting"><h2>Demo scripting</h2><div class="paragraph"><p>
-<div id="player-container-2d616865-2a29-4c86-a422-212af09e0501"></div>
+<div id="player-container-c790ffa6-d124-4b60-a206-a257243e6b66"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-2d616865-2a29-4c86-a422-212af09e0501', 'assert.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-c790ffa6-d124-4b60-a206-a257243e6b66', 'assert.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section></section>
 <section id="xestin-de-dependencias-con-gradle"><h2>Xestión de dependencias con Gradle</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">apply plugin: 'java'
