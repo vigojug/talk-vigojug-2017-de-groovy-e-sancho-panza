@@ -68,7 +68,7 @@ image::sancho.jpg[sancho,640,480]
 * Usado por Netflix, Oracle, Google, etc.
 
 == Groovy no mapa da JVM
-image::groovy-island.jpg[sancho,640,480]
+image::groovy-island.jpg[groovy-island,640,480]
 // Relation with other languages
 // Why Groovy is not so popular
 // Naming is important
@@ -126,7 +126,7 @@ class PowersOfTwoJava8 {
 
     public static void main(String[] args) {
 
-        IntStream.range(1, 10)
+        IntStream.range(0, 9)
                 .map(i -> (int) Math.pow(2, i))
                 .forEach(System.out::println);
 
@@ -310,17 +310,17 @@ image::questions.jpg[background, size=cover]
 * Slides: https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/
 * Código: https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza
 * Documentación Groovy: http://www.groovy-lang.org
-* Podes preguntarme en twitter: http://twitter.com/antonmry[@antonmry]
+* Tamén podes preguntarme en twitter: http://twitter.com/antonmry[@antonmry]
 
 == VigoJUG
 
-* Un meetup o derradeiro martes de cada mes.
-* ¿Te animas con unha charla?. Licencias de JetBrains ;-)
+* Un meetup o derradeiro martes de cada mes
+* ¿Te animas cunha charla?. Licencias de JetBrains ;-)
+* Involucrar as empresas locais
+* ¿Outras actividades?
 * Canal de slack #VigoJUG en http://phpvigo.slack.com
-* Involucrar as empresas locais.
-* ¿Outras actividades?.
 
-// TODO: add sponsors
+image::sponsors.jpg[sponsors,800,200]
 
 == Kahoot
 
