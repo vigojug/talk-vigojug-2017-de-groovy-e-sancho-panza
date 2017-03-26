@@ -29,7 +29,7 @@
 <section id="axenda"><h2>Axenda</h2><div class="ulist"><ul><li><p>¿Sancho Panza?</p></li><li><p>Instalación</p></li><li><p>Scripting e prototipado</p></li><li><p>Xestión de dependencias e de configuración</p></li><li><p>Probas unitarias e de integración</p></li><li><p>DSLs (Jenkins, JMeter, SoapUI)</p></li><li><p>As tuas propias DSLs</p></li></ul></div></section>
 <section id="sancho-panza"><h2>¿Sancho Panza?</h2><div class="imageblock" style=""><img src="./images/sancho.jpg" alt="sancho" width="640" height="480" /></div></section>
 <section id="groovy-vigojug-vigojug-groovy"><h2>Groovy, VigoJUG, VigoJUG, Groovy</h2><div class="ulist"><ul><li><p>Sintaxe moi similar a Java</p></li><li><p>Sinxelo e moi expresivo</p></li><li><p>Orientado a obxectos&#8230;&#8203; e funcional</p></li><li><p>Tipado&#8230;&#8203; se queres</p></li><li><p>Dinámico&#8230;&#8203; ou estático</p></li><li><p>Usado por Netflix, Oracle, Google, etc.</p></li></ul></div></section>
-<section id="groovy-no-mapa-da-jvm"><h2>Groovy no mapa da JVM</h2><div class="imageblock" style=""><img src="./images/groovy-island.jpg" alt="sancho" width="640" height="480" /></div>
+<section id="groovy-no-mapa-da-jvm"><h2>Groovy no mapa da JVM</h2><div class="imageblock" style=""><img src="./images/groovy-island.jpg" alt="groovy-island" width="640" height="480" /></div>
 <div class="paragraph"><p>Source: <a href="https://jaxenter.com/pirates-of-the-jvm-the-infographic-132524.html">@jaxenter.com</a></p></div></section>
 <section><section id="exemplo"><h2>Exemplo</h2><div class="paragraph"><p>Calcular a potencia de dous nun array</p></div><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">[0, 1, 2, 3, 4, ..., n]</code></pre></div></div><div class="imageblock" style=""><img src="./images/formula.jpg" alt="sancho" width="256" height="192" /></div><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">[0, 1, 2, 4, 8, ..., 2^n]</code></pre></div></div></section><section id="java-7"><h2>Java 7</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">import java.util.ArrayList;
 import java.util.List;
@@ -54,16 +54,16 @@ class PowersOfTwoJava8 {
 
     public static void main(String[] args) {
 
-        IntStream.range(1, 10)
+        IntStream.range(0, 9)
                 .map(i -&gt; (int) Math.pow(2, i))
                 .forEach(System.out::println);
 
     }
 }</code></pre></div></div></section><section id="groovy"><h2>Groovy</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">(0..&lt;10).forEach() { println 2 ** it }</code></pre></div></div></section></section>
 <section><section id="instalacin"><h2>Instalación</h2><div class="paragraph"><p>
-<div id="player-container-d2460e7c-da51-4154-a5d4-8488841869f5"></div>
+<div id="player-container-5ed28e02-687d-44ca-8147-3ae4ca9cc220"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-d2460e7c-da51-4154-a5d4-8488841869f5', 'sdkman.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-5ed28e02-687d-44ca-8147-3ae4ca9cc220', 'sdkman.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section><section id="moi-doado"><h2>Moi doado</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>curl -s "https://get.sdkman.io" | bash
 sdk install groovy
@@ -80,9 +80,9 @@ def resp = jokes.get( path: '/joke/random/' )
 assert resp.status == 200
 
 println "Joke: " + resp.data.joke</code></pre></div></div></section><section id="demo-scripting"><h2>Demo scripting</h2><div class="paragraph"><p>
-<div id="player-container-c790ffa6-d124-4b60-a206-a257243e6b66"></div>
+<div id="player-container-6ce3cb76-0050-4ba4-b39e-90afa584c582"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-c790ffa6-d124-4b60-a206-a257243e6b66', 'assert.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-6ce3cb76-0050-4ba4-b39e-90afa584c582', 'assert.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section></section>
 <section id="xestin-de-dependencias-con-gradle"><h2>Xestión de dependencias con Gradle</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">apply plugin: 'java'
@@ -167,8 +167,9 @@ given { } when { } then { }</code></pre></div></div>
 <div class="paragraph"><p>Info: <a href="http://docs.groovy-lang.org/docs/latest/html/documentation/core-domain-specific-languages.html">groovy-lang.org</a></p></div></section>
 <section id="resumen" data-background-image="./images/austin-powers.jpg" data-background-size="cover"></section>
 <section id="gracias" data-background-image="./images/questions.jpg" data-background-size="cover"><h2>¡Gracias!</h2>
-<div class="ulist"><ul><li><p>Slides: <a href="https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/" class="bare">https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/</a></p></li><li><p>Código: <a href="https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza" class="bare">https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza</a></p></li><li><p>Documentación Groovy: <a href="http://www.groovy-lang.org" class="bare">http://www.groovy-lang.org</a></p></li><li><p>Podes preguntarme en twitter: <a href="http://twitter.com/antonmry">@antonmry</a></p></li></ul></div></section>
-<section id="vigojug"><h2>VigoJUG</h2><div class="ulist"><ul><li><p>Un meetup o derradeiro martes de cada mes.</p></li><li><p>¿Te animas con unha charla?. Licencias de JetBrains ;-)</p></li><li><p>Canal de slack #VigoJUG en <a href="http://phpvigo.slack.com" class="bare">http://phpvigo.slack.com</a></p></li><li><p>Involucrar as empresas locais.</p></li><li><p>¿Outras actividades?.</p></li></ul></div></section>
+<div class="ulist"><ul><li><p>Slides: <a href="https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/" class="bare">https://antonmry.github.io/talk-vigojug-2017-de-groovy-e-sancho-panza/</a></p></li><li><p>Código: <a href="https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza" class="bare">https://github.com/antonmry/talk-vigojug-2017-de-groovy-e-sancho-panza</a></p></li><li><p>Documentación Groovy: <a href="http://www.groovy-lang.org" class="bare">http://www.groovy-lang.org</a></p></li><li><p>Tamén podes preguntarme en twitter: <a href="http://twitter.com/antonmry">@antonmry</a></p></li></ul></div></section>
+<section id="vigojug"><h2>VigoJUG</h2><div class="ulist"><ul><li><p>Un meetup o derradeiro martes de cada mes</p></li><li><p>¿Te animas cunha charla?. Licencias de JetBrains ;-)</p></li><li><p>Involucrar as empresas locais</p></li><li><p>¿Outras actividades?</p></li><li><p>Canal de slack #VigoJUG en <a href="http://phpvigo.slack.com" class="bare">http://phpvigo.slack.com</a></p></li></ul></div>
+<div class="imageblock" style=""><img src="./images/sponsors.jpg" alt="sponsors" width="800" height="200" /></div></section>
 <section id="kahoot"><h2>Kahoot</h2><div class="imageblock" style=""><img src="./images/kahoot.jpg" alt="kahoot" width="640" height="480" /></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
