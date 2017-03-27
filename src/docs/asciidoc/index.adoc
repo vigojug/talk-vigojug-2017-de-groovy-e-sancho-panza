@@ -141,7 +141,7 @@ class PowersOfTwoJava8 {
 (0..<10).forEach() { println 2 ** it }
 ----
 
-== Instalación
+== Instalación con SDKMAN
 
 screencast:sdkman[]
 
@@ -317,17 +317,88 @@ image::questions.jpg[background, size=cover]
 * Un meetup o derradeiro martes de cada mes
 * ¿Te animas cunha charla?. Licencias de JetBrains ;-)
 * Involucrar as empresas locais
-* ¿Outras actividades?
+* Outros grupos locais (mañá JS!)
 * Canal de slack #VigoJUG en http://phpvigo.slack.com
 
 image::sponsors.jpg[sponsors,800,200]
+
+== O reto
+
+* Exercicio de programación breve (30 minutos) en GitHub
+* PRs (un directorio por cada usuaria)
+* Unha semana antes: se fecha e lanzamos encuesta (Twitter?, +1 en Github?)
+* Charla lostrego no seguinte meetup
 
 == Kahoot
 
 image::kahoot.jpg[kahoot, 640, 480]
 
-// TODO
-// Question about basic vs. advanced talks
-// Question about reading club
-// Question about study group (Java 9, introduction, etc.)
-// Question about workshop with kids (minecraft)
+=== Quiz 1
+
+[source,java]
+----
+// Saved in file ".java"
+class A{
+	public static void main(String args[]){
+		System.out.println("Hello java");
+	}
+}
+----
+
+// Hello java
+
+=== Quiz 2
+
+[source,java]
+----
+Collection<String> coll = new ArrayList<>();
+coll.add("Fred"); coll.add("Jim"); coll.add("Sheila");
+System.out.println("coll is " + coll);
+coll.remove(0); // line n1
+System.out.println("coll is " + coll);
+----
+
+=== Quiz 3
+
+[source,java]
+----
+Path p = Paths.get("a", "b", "cee"); // line n1
+System.out.println(p.endsWith(Paths.get("b", "cee")));
+System.out.println(p.endsWith(Paths.get("ee")));
+----
+
+=== Quiz 4
+
+[source,java]
+----
+class A {
+    int x = 1;
+
+    public static void main(String [] args) {
+        System.out.println("x is " + x);
+    }
+}
+----
+
+=== Quiz 5
+
+[source,java]
+----
+class A {
+    public static void main(String [] args) {
+        A a = new B();
+    }
+}
+
+class B extends A {
+}
+----
+
+=== Quiz 6
+
+[source,groovy]
+----
+def it = 4
+(0..<10).forEach() { println 2 ** it + " " }
+----
+
