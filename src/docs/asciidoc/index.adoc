@@ -326,7 +326,7 @@ image::sponsors.jpg[sponsors,800,200]
 
 * Exercicio de programación breve (30 minutos) en GitHub
 * PRs (un directorio por cada usuaria)
-* Unha semana antes: se fecha e lanzamos encuesta (Twitter?, +1 en Github?)
+* Unha semana antes: se fecha e lanzamos enquisa (Twitter?, +1 en Github?)
 * Charla lostrego no seguinte meetup
 
 == Kahoot
